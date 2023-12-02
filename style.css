@@ -11,7 +11,16 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+i {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /* HEADER */
@@ -45,6 +54,7 @@ header {
 .middle-section {
   flex: 1;
   max-width: 30rem;
+  margin-left: 2rem;
 }
 
 .middle-section input {
@@ -82,6 +92,41 @@ header {
 
 .right-section {
   flex-shrink: 0;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 14rem;
+}
+
+/* NAV */
+
+nav {
+  position: fixed;
+  top: 3.5rem;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 12rem;
+}
+
+.nav-section {
+  padding: .5rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: .875rem;
+}
+
+.nav-links i {
+  font-size: 1.5rem;
 }
