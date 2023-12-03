@@ -11,7 +11,10 @@
   <!-------------------------------- HEADER -------------------------------->
   <header>
     <div class="left-section">
-      <i class="ri-menu-line"></i>
+      <button class="menu-icon">
+        <i class="ri-menu-line"></i>
+      </button>
+      
       <span>YouTube</span>
     </div>
 
@@ -40,49 +43,64 @@
 
   <!-------------------------------- NAVIGATION -------------------------------->
   <nav>
-    <div class="nav-section">
+    <div class="navbar">
       <div class="nav-links">
-        <i class="ri-home-line"></i>
-        <a href="#">Home</a>
+        <a href="#">
+          <i class="ri-home-line"></i>
+          <p>Home</p>
+        </a>
+        <a href="">
+          <i class="ri-bookmark-line"></i>
+          <p>Bookmark</p>
+        </a>
+        <a href="">
+          <i class="ri-settings-2-line"></i>
+          <p>Settings</p>
+        </a>
+        <a href="">
+          <i class="ri-account-box-line"></i>
+          <p>Profile</p>
+        </a>
       </div>
 
       <div class="nav-links">
-        <i class="ri-bookmark-line"></i>
-        <a href="#">Bookmark</a>
-      </div>
-
-      <div class="nav-links">
-        <i class="ri-settings-2-line"></i>
-        <a href="#">Settings</a>
-      </div>
-      
-      <div class="nav-links">
-        <i class="ri-account-box-line"></i>
-        <a href="#">My Profile</a>
+        <a href="#">
+          <i class="ri-history-line"></i>
+          <p>Hostory</p>
+        </a>
+        <a href="">
+          <i class="ri-video-line"></i>
+          <p>My Video</p>
+        </a>
+        <a href="">
+          <i class="ri-time-line"></i>
+          <p>Watch Later</p>
+        </a>
+        <a href="">
+          <i class="ri-arrow-down-s-line"></i>
+          <p>Show More</p>
+        </a>
       </div>
     </div>
 
-    <div class="nav-section">
-      <div class="nav-links">
-        <i class="ri-history-line"></i>
-        <a href="#">History</a>
-      </div>
 
-      <div class="nav-links">
-        <i class="ri-video-line"></i>
-        <a href="#">My Video</a>
-      </div>
-
-      <div class="nav-links">
-        <i class="ri-time-line"></i>
-        <a href="#">Watch Later</a>
-      </div>
-      
-      <div class="nav-links">
-        <i class="ri-arrow-down-s-line"></i>
-        <a href="#">Show More</a>
-      </div>
-    </div>
   </nav>
+
+  <!-------------------------------- VIDEO CONTAINER -------------------------------->
+  <section>
+    <div class="video-container">
+      <div class="video-grid">
+        <div class="thumbnail-container">
+
+        </div>
+        <div class="info-container">
+          <div class="channel-picture"></div>
+          <div class="text-container"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
