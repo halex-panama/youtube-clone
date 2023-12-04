@@ -124,21 +124,6 @@ nav {
   gap: 2rem;
 }
 
-.navbar {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin: 0 .5rem;
-}
-
-.nav-links a {
-  display: flex;
-  align-items: center;
-  font-size: .875rem;
-  gap: 1.5rem;
-  padding: .5rem 1rem;
-}
-
 .nav-links a:hover {
   background-color: #cfcfcf;
   border-radius: .5rem;
@@ -148,11 +133,37 @@ nav {
   font-size: 1.5rem;
 }
 
-.navbar.active .nav-links a {
+.navbar {
+  display: flex;
   flex-direction: column;
-  padding: .75rem 0;
-  gap: 0;
+  gap: 2rem;
+  margin: 0 .5rem;
+}
+
+.nav-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: .65rem;
+  gap: .5rem;
+  padding: .75rem 0;
+}
+
+.nav-links.bottom-container {
+  visibility: hidden;
+}
+
+.navbar.active .nav-links a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: .875rem;
+  gap: 1.5rem;
+  padding: .5rem 1rem;
+}
+
+.navbar.active .nav-links.bottom-container {
+  visibility: visible;
 }
 
 /* VIDEO CONTAINER */
