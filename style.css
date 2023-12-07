@@ -37,6 +37,10 @@ header {
   align-items: center;
 }
 
+header.mobile {
+  display: none;
+}
+
 .left-section, .middle-section, 
 .right-section {
   display: flex;
@@ -169,6 +173,7 @@ nav {
   font-size: .875rem;
   gap: 1.5rem;
   padding: .5rem 1rem;
+  width: 12rem;
 }
 
 .navbar.active .nav-links.bottom-container {
@@ -181,6 +186,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding-top: 4.5rem;
+  padding-bottom: 5rem;
   padding-left: 6rem;
   padding-right: 1.5rem;
   row-gap: 1rem;
@@ -194,6 +200,7 @@ nav {
   width: 100%;
   padding: .5rem;
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 .info-container {
@@ -231,4 +238,107 @@ nav {
 
 .channel-name {
   margin-bottom: .25rem;
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0,0,0,0.3);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+} 
+
+/* MEDIAQUERIES */
+
+@media (max-width: 1100px) {
+  .video-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav-links a {
+    display: none;
+  }
+
+  .navbar.active .nav-links a {
+    display: flex;
+  }
+
+  .video-container, .video-container.shrink {
+    padding-left: 1.5rem;
+  }
+
+  .overlay.show {
+    visibility: visible;
+    left: 13rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .video-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 655px) {
+  header.desktop {
+    display: none;
+  }
+
+  header.mobile {
+    display: flex;
+    padding: 0 1rem;
+  }
+
+  .middle-section {
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  .middle-section input {
+    display: none;
+  }
+
+  .search-button {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    transition: background-color 300ms ease 0s;
+  }
+
+  .search-button:hover {
+    background-color: #cfcfcf;
+  }
+
+  .right-section {
+    width: auto;
+  }
+
+  nav {
+    right: 0;
+    top: auto;
+    height: 4rem;
+  }
+
+  .navbar {
+    height: 4rem;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav-links a {
+    display: flex;
+    gap: 0;
+  }
 }
