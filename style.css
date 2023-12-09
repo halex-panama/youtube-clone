@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
 
 *{
   margin: 0;
@@ -14,7 +14,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-i {
+i, img {
   cursor: pointer;
 }
 
@@ -35,6 +35,8 @@ header {
   background-color: white;
   height: 3.5rem;
   align-items: center;
+  z-index: 100;
+  transition: background-color 300ms ease 0s;
 }
 
 header.mobile {
@@ -112,6 +114,10 @@ header.mobile {
   transition: background-color 300ms ease 0s;
 }
 
+.voice-search-button {
+  border: 1px solid #cfcfcf;
+}
+
 .voice-search-button:hover,
 .right-section button:hover, .menu-icon:hover {
   border-radius: 50%;
@@ -131,10 +137,10 @@ nav {
   top: 3.5rem;
   left: 0;
   bottom: 0;
-  background-color: white;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  z-index: 100;
 }
 
 .nav-links a:hover {
@@ -151,6 +157,8 @@ nav {
   flex-direction: column;
   gap: 2rem;
   margin: 0 .5rem;
+  background-color: white;
+  transition: background-color 300ms ease 0s;
 }
 
 .nav-links a {
@@ -180,6 +188,14 @@ nav {
   visibility: visible;
 }
 
+.sub-menu {
+  visibility: hidden;
+}
+
+.sub-menu.open {
+  visibility: visible;
+}
+
 /* VIDEO CONTAINER */
 
 .video-container {
@@ -190,6 +206,7 @@ nav {
   padding-left: 6rem;
   padding-right: 1.5rem;
   row-gap: 1rem;
+  transition: background-color 300ms ease 0s;
 }
 
 .video-container.shrink {
@@ -199,8 +216,13 @@ nav {
 .thumbnail-container img {
   width: 100%;
   padding: .5rem;
-  border-radius: 1rem;
-  cursor: pointer;
+  border-radius: 1.5rem;
+  transition: 300ms ease 0s;
+}
+
+.thumbnail-container img:hover {
+  border-radius: 0;
+  transform: scale(1.01);
 }
 
 .info-container {
@@ -248,9 +270,59 @@ nav {
   right: 0;
   bottom: 0;
   visibility: hidden;
-} 
+}
+
+/* DARK MODE */
+
+header.dark-mode, 
+.navbar.dark-mode, .video-container.dark-mode {
+  background-color: #212121;
+}
+
+header.dark-mode i, header.dark-mode .left-section a, .navbar.dark-mode i,
+.video-container.dark-mode .video-title{
+  color: rgba(255, 255, 255, 0.88);;
+}
+
+header.dark-mode input {
+  background-color: #212121;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+header.dark-mode .search-button {
+  background-color: #3d3d3d;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+header.dark-mode .voice-search-button {
+  background-color: #3d3d3d;
+  border: none;
+}
+
+header.dark-mode .search-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.video-container.dark-mode .channel-name, .video-container.dark-mode .views {
+  color: #aaaaaa;
+}
+
+header.dark-mode button:hover, .navbar.dark-mode .nav-links a:hover {
+  background-color: #3d3d3d;
+}
+
+.navbar.dark-mode .nav-links a {
+  color: white;
+}
 
 /* MEDIAQUERIES */
+
+@media (min-width: 1440px) {
+  .video-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 @media (max-width: 1100px) {
   .video-container {
@@ -340,5 +412,6 @@ nav {
   .nav-links a {
     display: flex;
     gap: 0;
+    width: 4rem;
   }
 }
