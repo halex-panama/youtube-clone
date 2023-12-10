@@ -170,7 +170,6 @@ nav {
   margin: 0 .5rem;
   background-color: white;
   transition: 100ms ease;
-  transform: translateY(-2rem);
 }
 
 .nav-links a {
@@ -375,6 +374,10 @@ header.dark-mode button:hover, .navbar.dark-mode .nav-links a:hover {
 }
 
 @media (max-width: 1100px) {
+  .navbar {
+    transform: translateY(-2rem);
+  }
+
   .nav-links a {
     display: none;
   }
