@@ -453,6 +453,7 @@ header.dark-mode button:hover, .navbar.dark-mode .nav-links a:hover {
 
   .navbar {
     height: 4rem;
+    transform: translate(0);
   }
 
   .nav-links {
