@@ -36,7 +36,7 @@ header {
   height: 3.5rem;
   align-items: center;
   z-index: 100;
-  transition: background-color 300ms ease 0s;
+  transition: background-color 100ms;
 }
 
 header.mobile {
@@ -106,7 +106,7 @@ header.mobile {
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: .3s ease;
+  transition: 100ms ease;
 }
 
 .search-button:hover {
@@ -124,7 +124,7 @@ header.mobile {
   border: none;
   background: none;
   position: relative;
-  transition: background-color 300ms ease 0s;
+  transition: background-color 200ms ease;
 }
 
 .voice-search-button {
@@ -206,6 +206,7 @@ nav {
   font-size: .65rem;
   gap: .5rem;
   padding: .75rem 0;
+  transition: 200ms ease;
 }
 
 .nav-links.bottom-container {
@@ -248,7 +249,7 @@ nav {
   padding-left: 6rem;
   padding-right: 1.5rem;
   row-gap: 1rem;
-  transition: background-color 300ms ease 0s;
+  transition: background-color 100ms ease;
 }
 
 .video-container.shrink {
@@ -263,7 +264,7 @@ nav {
   width: 100%;
   padding: .5rem;
   border-radius: 1.5rem;
-  transition: 300ms ease 0s;
+  transition: 200ms ease;
 }
 
 .thumbnail-container img:hover {
@@ -338,8 +339,7 @@ nav {
 
 /* DARK MODE */
 
-header.dark-mode, 
-.navbar.dark-mode, .video-container.dark-mode {
+header.dark-mode, .navbar.dark-mode, .video-container.dark-mode {
   background-color: #212121;
 }
 
@@ -457,7 +457,7 @@ header.dark-mode button:hover, .navbar.dark-mode .nav-links a:hover {
     border-radius: 50%;
     border: none;
     background: none;
-    transition: background-color 300ms ease 0s;
+    transition: background-color 100ms;
   }
 
   header.dark-mode .search-button {
