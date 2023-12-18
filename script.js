@@ -22,7 +22,7 @@ showMoreButton.addEventListener('click', () => {
   subMenu.classList.toggle('open');
 });
 
-const themeClasses = document.querySelectorAll('header, .navbar, .video-container');
+const themeClasses = document.querySelectorAll('header, nav, .navbar, .video-container');
 
 document.querySelector('.theme').addEventListener('click', () => {
   themeClasses.forEach(element => {
