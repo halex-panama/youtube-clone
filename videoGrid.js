@@ -1,4 +1,4 @@
-const videoGrid = [
+export const videoGrid = [
   {
     thumbnail: 'assets/thumbnail/thumbnail-1.jpg',
     title : 'Witnessing the Majestic Sun at the Edge of the World',

@@ -1,3 +1,5 @@
+import {videoGrid} from "./videoGrid.js";
+
 const menuIcon = document.querySelector('.menu-icon'),
       navbar = document.querySelector('.navbar'),
       videoContainer = document.querySelector('.video-container'),
@@ -30,24 +32,29 @@ document.querySelector('.theme').addEventListener('click', () => {
 
 let videoGridHTML = '';
 
-videoGrid.forEach((video, index) => {
+videoGrid.forEach((video) => {
   videoGridHTML += `
-  <div class="video-grid">
-    <div class="thumbnail-container">
-      <img src="${videoGrid[index].thumbnail}">
-      <div class="video-time">${videoGrid[index].time}</div>
-    </div>
-    <div class="info-container">
-      <div class="channel-picture">
-        <img src="${videoGrid[index].picture}">
+    <div class="video-grid">
+      <div class="thumbnail-container">
+        <img src="${video.thumbnail}">
+        <div class="video-time">${video.time}</div>
       </div>
-      <div class="text-container">
-        <p class="video-title">${videoGrid[index].title}</p>
-        <p class="channel-name">${videoGrid[index].name}</p>
-        <p class="views">${videoGrid[index].views}</p>
+      <div class="info-container">
+        <div class="channel-picture">
+          <img src="${video.picture}">
+        </div>
+        <div class="text-container">
+          <p class="video-title">${video.title}</p>
+          <p class="channel-name">${video.name}</p>
+          <p class="views">${video.views}</p>
+        </div>
+        <div class="options">
+          <a class="option-icon">
+            <i class="ri-more-2-fill"></i>
+          </a>
+        </div>
       </div>
     </div>
-</div>
   `;
 });
 
